@@ -1,0 +1,21 @@
+__pycache__/
+*.pyc
+.venv/
+.pytest_cache/
+.coverage
+coverage.xml
+report.xml
+sbom.json
+*.egg-info/
+
+# Secrets et données locales
+certs/
+*.key
+*.pem
+*.db
+*.sqlite3
+.secuchat/
+.env
+
+# Documents de référence locaux (hors dépôt)
+doc/
