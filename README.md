@@ -160,8 +160,8 @@ pip-audit -r requirements.txt
 
 | Membre | Rôle |
 |---|---|
-| Mahdi DEBBAH | Chef de projet, authentification, chiffrement E2E, CI et documentation |
-| _[membre 2]_ | Protocole, serveur, client CLI |
+|Islam Mahdi DEBBAH | Chef de projet, authentification, chiffrement E2E, CI et documentation |
+|Yanis Ramy OULAD DAOUD| Protocole, serveur, client CLI |
 
 Les tests sont écrits par les deux membres : chacun teste les modules qu'il développe, et l'autre relit la pull request.
 
