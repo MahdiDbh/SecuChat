@@ -1,7 +1,7 @@
-# SecuChat — Messagerie multipoints sécurisée
+# SecuChat Messagerie multipoints sécurisée
 
-Projet du cours **Secure Development / DevSecOps** — EPITA, Majeure Cybersécurité, 2026-2027.
-Version actuelle : **β (MVP)** — rendu du 17/11/2026.
+Projet du cours **Secure Development / DevSecOps** EPITA, Majeure Cybersécurité, 2026-2027.
+Version actuelle : **β (MVP)**  rendue le 17/11/2026.
 
 SecuChat est une messagerie client/serveur en Python qui permet à plusieurs utilisateurs d'échanger dans des salons (multipoints) ou en message direct. Les messages sont chiffrés de bout en bout : le serveur relaie des messages qu'il ne peut pas lire.
 
