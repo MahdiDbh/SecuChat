@@ -17,10 +17,19 @@ FAST_HASHER = PasswordHasher(time_cost=1, memory_cost=8, parallelism=1)
 @pytest.fixture(scope="session")
 def tls_cert(tmp_path_factory):
     """Certificat auto-signé (localhost / 127.0.0.1) généré une fois pour la session."""
+    return _generate_cert(tmp_path_factory.mktemp("certs"))
+
+
+@pytest.fixture(scope="session")
+def other_cert(tmp_path_factory):
+    """Un autre certificat valide, qui n'est PAS celui du serveur."""
+    return _generate_cert(tmp_path_factory.mktemp("other"))
+
+
+def _generate_cert(d):
     openssl = shutil.which("openssl")
     if openssl is None:
         pytest.skip("openssl introuvable")
-    d = tmp_path_factory.mktemp("certs")
     cert, key = d / "server.crt", d / "server.key"
     subprocess.run(  # noqa: S603 - arguments fixes, pas de shell
         [
