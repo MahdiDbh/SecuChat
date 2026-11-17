@@ -13,6 +13,11 @@ DEFAULT_PORT = 8443
 MAX_MESSAGE_SIZE = 64 * 1024  # 64 Ko : taille max d'une ligne JSON (limite de readline)
 READ_TIMEOUT = 300  # secondes sans rien recevoir avant de couper la connexion
 CONNECT_TIMEOUT = 10  # secondes pour établir la connexion TLS côté client
+HANDSHAKE_TIMEOUT = 10  # secondes max pour la poignée de main TLS côté serveur
+WRITE_TIMEOUT = 10  # secondes max pour envoyer un message à un client lent
+MAX_CONNECTIONS = 200  # connexions simultanées max (anti-flood)
+IP_MAX_LOGIN_FAILURES = 20  # échecs de connexion max par IP...
+IP_WINDOW_SECONDS = 60  # ...sur cette fenêtre glissante
 
 # --- Règles de gestion (§4.2) ---
 # Liste blanche : lettres ASCII, chiffres, "_" et "-". Utiliser re.fullmatch / pydantic.
